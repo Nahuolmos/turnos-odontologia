@@ -1,1 +1,273 @@
-{"discovery": {"casos_de_uso": ["Paciente reserva 24/7 sin login obligatorio", "Recepción agenda multi-sillón día/semana sin solape", "Paciente paga seña % MP y recibe WA 24hs antes", "Recepción cancela/reprograma liberando horario", "Odontólogo ve su día + odontograma/historia", "Admin configura aranceles y reportes"], "competitors": [{"name": "Fresha", "notes_file": "discovery/sources/fresha.md"}, {"name": "Historia Dental", "notes_file": "discovery/sources/historia-dental.md"}, {"name": "DentalSoft", "notes_file": "discovery/sources/dentalsoft.md"}, {"name": "Nimbo", "notes_file": "discovery/sources/nimbo.md"}, {"name": "Tab32", "notes_file": "discovery/sources/tab32.md"}, {"name": "Bilog", "notes_file": "discovery/sources/bilog.md"}, {"name": "Dentaly", "notes_file": "discovery/sources/dentaly.md"}, {"name": "Doctolib", "notes_file": "discovery/sources/doctolib.md"}], "created_by": "discovery-research", "funcionalidades_necesarias": ["Reserva 24/7 sin login obligatorio + login opcional historial", "Agenda multi-sillón día/semana + panel recepción", "Cancelar/reprogramar con liberación", "Seña % Mercado Pago en v1", "Recordatorio WhatsApp 24hs antes", "Odontograma + historia clínica v1", "ABM aranceles por Administrador"], "funcionalidades_opcionales": ["OS/nomenclador automático", "Facturación ARCA", "Liquidaciones por profesional", "Portal post-tratamiento", "Multi-sede (fuera v1)"], "integraciones": ["Mercado Pago seña %", "WhatsApp confirmación/recordatorio", "Google Calendar + email respaldo"], "preguntas_abiertas": ["Duración bloqueo por 2 faltas", "% seña por tipo de práctica", "Proveedor WhatsApp final Meta vs Twilio"], "problema": "Consultorios coordinan por WhatsApp/papel: dobles reservas, ausentismo sin seña y tiempo confirmando manual", "reglas_de_negocio": ["Sin solape por sillón/odontólogo", "Cancelación mínima 12hs", "1 reprogramación sin perder seña; cancela tarde = seña no reembolsable", "Bloqueo si falta 2 veces", "Seña en % configurada por Admin"], "restricciones": ["Backend Python/FastAPI/JWT/SQLAlchemy/PostgreSQL/Redis/Docker-Compose", "Frontend React/TypeScript/Vite", "1 clínica en v1", "Mobile-first"], "riesgos": ["Adopción: siguen por WA y seña genera fricción/abandono (supuesto sin probar)", "Recepción no actualiza disponibilidad", "Costos/bloqueo WhatsApp Meta-Twilio", "Fricción y conciliación MP"], "sources": ["relevamiento-18-sistemas-2026-10-06"], "usuarios": ["Paciente: reserva 24/7 login opcional", "Recepcionista: agenda multi-sillón", "Odontólogo: su sillón y pacientes", "Admin clínica: aranceles y reportes, 1 clínica"]}, "owner": "active-orchestrator", "step": "discovery", "version": 4}
+﻿{
+    "discovery":  {
+                      "casos_de_uso":  [
+                                           "Paciente reserva 24/7 sin login obligatorio",
+                                           "RecepciÃƒÂ³n agenda multi-sillÃƒÂ³n dÃƒÂ­a/semana sin solape",
+                                           "Paciente paga seÃƒÂ±a % MP y recibe WA 24hs antes",
+                                           "RecepciÃƒÂ³n cancela/reprograma liberando horario",
+                                           "OdontÃƒÂ³logo ve su dÃƒÂ­a + odontograma/historia",
+                                           "Admin configura aranceles y reportes"
+                                       ],
+                      "competitors":  [
+                                          {
+                                              "name":  "Fresha",
+                                              "notes_file":  "discovery/sources/fresha.md"
+                                          },
+                                          {
+                                              "name":  "Historia Dental",
+                                              "notes_file":  "discovery/sources/historia-dental.md"
+                                          },
+                                          {
+                                              "name":  "DentalSoft",
+                                              "notes_file":  "discovery/sources/dentalsoft.md"
+                                          },
+                                          {
+                                              "name":  "Nimbo",
+                                              "notes_file":  "discovery/sources/nimbo.md"
+                                          },
+                                          {
+                                              "name":  "Tab32",
+                                              "notes_file":  "discovery/sources/tab32.md"
+                                          },
+                                          {
+                                              "name":  "Bilog",
+                                              "notes_file":  "discovery/sources/bilog.md"
+                                          },
+                                          {
+                                              "name":  "Dentaly",
+                                              "notes_file":  "discovery/sources/dentaly.md"
+                                          },
+                                          {
+                                              "name":  "Doctolib",
+                                              "notes_file":  "discovery/sources/doctolib.md"
+                                          }
+                                      ],
+                      "created_by":  "discovery-research",
+                      "funcionalidades_necesarias":  [
+                                                         "Reserva 24/7 sin login obligatorio + login opcional historial",
+                                                         "Agenda multi-sillÃƒÂ³n dÃƒÂ­a/semana + panel recepciÃƒÂ³n",
+                                                         "Cancelar/reprogramar con liberaciÃƒÂ³n",
+                                                         "SeÃƒÂ±a % Mercado Pago en v1",
+                                                         "Recordatorio WhatsApp 24hs antes",
+                                                         "Odontograma + historia clÃƒÂ­nica v1",
+                                                         "ABM aranceles por Administrador"
+                                                     ],
+                      "funcionalidades_opcionales":  [
+                                                         "OS/nomenclador automÃƒÂ¡tico",
+                                                         "FacturaciÃƒÂ³n ARCA",
+                                                         "Liquidaciones por profesional",
+                                                         "Portal post-tratamiento",
+                                                         "Multi-sede (fuera v1)"
+                                                     ],
+                      "integraciones":  [
+                                            "Mercado Pago seÃƒÂ±a %",
+                                            "WhatsApp confirmaciÃƒÂ³n/recordatorio",
+                                            "Google Calendar + email respaldo"
+                                        ],
+                      "preguntas_abiertas":  [
+                                                 "DuraciÃƒÂ³n bloqueo por 2 faltas",
+                                                 "% seÃƒÂ±a por tipo de prÃƒÂ¡ctica",
+                                                 "Proveedor WhatsApp final Meta vs Twilio"
+                                             ],
+                      "problema":  "Consultorios coordinan por WhatsApp/papel: dobles reservas, ausentismo sin seÃƒÂ±a y tiempo confirmando manual",
+                      "reglas_de_negocio":  [
+                                                "Sin solape por sillÃƒÂ³n/odontÃƒÂ³logo",
+                                                "CancelaciÃƒÂ³n mÃƒÂ­nima 12hs",
+                                                "1 reprogramaciÃƒÂ³n sin perder seÃƒÂ±a; cancela tarde = seÃƒÂ±a no reembolsable",
+                                                "Bloqueo si falta 2 veces",
+                                                "SeÃƒÂ±a en % configurada por Admin"
+                                            ],
+                      "restricciones":  [
+                                            "Backend Python/FastAPI/JWT/SQLAlchemy/PostgreSQL/Redis/Docker-Compose",
+                                            "Frontend React/TypeScript/Vite",
+                                            "1 clÃƒÂ­nica en v1",
+                                            "Mobile-first"
+                                        ],
+                      "riesgos":  [
+                                      "AdopciÃƒÂ³n: siguen por WA y seÃƒÂ±a genera fricciÃƒÂ³n/abandono (supuesto sin probar)",
+                                      "RecepciÃƒÂ³n no actualiza disponibilidad",
+                                      "Costos/bloqueo WhatsApp Meta-Twilio",
+                                      "FricciÃƒÂ³n y conciliaciÃƒÂ³n MP"
+                                  ],
+                      "sources":  [
+                                      "relevamiento-18-sistemas-2026-10-06"
+                                  ],
+                      "usuarios":  [
+                                       "Paciente: reserva 24/7 login opcional",
+                                       "Recepcionista: agenda multi-sillÃƒÂ³n",
+                                       "OdontÃƒÂ³logo: su sillÃƒÂ³n y pacientes",
+                                       "Admin clÃƒÂ­nica: aranceles y reportes, 1 clÃƒÂ­nica"
+                                   ]
+                  },
+    "owner":  "active-orchestrator",
+    "step":  "find-skill",
+    "version":  4,
+    "kb":  {
+               "files":  [
+                             "knowledge-base/01_vision_y_objetivos.md",
+                             "knowledge-base/02_descripcion_general.md",
+                             "knowledge-base/03_actores_y_roles.md",
+                             "knowledge-base/04_modelo_de_datos.md",
+                             "knowledge-base/05_reglas_de_negocio.md",
+                             "knowledge-base/06_funcionalidades.md",
+                             "knowledge-base/07_flujos_principales.md",
+                             "knowledge-base/08_arquitectura_propuesta.md",
+                             "knowledge-base/09_decisiones_y_supuestos.md",
+                             "knowledge-base/10_preguntas_abiertas.md",
+                             "knowledge-base/11_pagos_mercadopago.md",
+                             "knowledge-base/12_whatsapp_twilio.md",
+                             "knowledge-base/README.md"
+                         ],
+               "source":  "interactive",
+               "created_by":  "kb-creator",
+               "discovery":  {
+                                 "stack":  "Python/FastAPI/JWT/SQLAlchemy/PostgreSQL/Redis/Docker-Compose + React/TypeScript/Vite",
+                                 "domain":  "odontologia",
+                                 "system_type":  "web_app",
+                                 "problem":  "Consultorios coordinan por WhatsApp/papel: dobles reservas, ausentismo sin seÃƒÂ±a y tiempo confirmando manual",
+                                 "needs_infra":  true,
+                                 "scale":  "team"
+                             }
+           },
+    "roadmap":  {
+                    "created_by":  "roadmap-generator",
+                    "changes_file":  "CHANGES.md",
+                    "source":  "CHANGES.md",
+                    "changes":  [
+                                    "C-01",
+                                    "C-02",
+                                    "C-03",
+                                    "C-04",
+                                    "C-05",
+                                    "C-06",
+                                    "C-07",
+                                    "C-08",
+                                    "C-09",
+                                    "C-10",
+                                    "C-11",
+                                    "C-12",
+                                    "C-13"
+                                ]
+                },
+    "skills":  {
+                   "recommended":  [
+                                       {
+                                           "why":  "React 18 + Vite booking/agenda/panel-dia mobile-first (C-06/C-07/C-12)",
+                                           "installs":  "797.8K",
+                                           "name":  "vercel-react-best-practices",
+                                           "repo":  "vercel-labs/agent-skills@vercel-react-best-practices"
+                                       },
+                                       {
+                                           "why":  "Landing/reserva y panel dia mobile-first distintivo, no plantilla (C-06/C-07)",
+                                           "installs":  "982.8K",
+                                           "name":  "frontend-design",
+                                           "repo":  "anthropics/skills@frontend-design"
+                                       },
+                                       {
+                                           "why":  "Guia visual web para reserva 24/7 y gestion por token (C-06)",
+                                           "installs":  "733.3K",
+                                           "name":  "web-design-guidelines",
+                                           "repo":  "vercel-labs/agent-skills@web-design-guidelines"
+                                       },
+                                       {
+                                           "why":  "Postgres 16: EXCLUDE gist anti-solape, indices turnos, RLS clinic_id (C-02/C-05)",
+                                           "installs":  "443.5K",
+                                           "name":  "supabase-postgres-best-practices",
+                                           "repo":  "supabase/agent-skills@supabase-postgres-best-practices"
+                                       },
+                                       {
+                                           "why":  "Diseno tablas clinica/personas/turnos/pagos/notificaciones + CHECKs (C-02/C-04/C-05/C-09)",
+                                           "installs":  "27.1K",
+                                           "name":  "postgresql-table-design",
+                                           "repo":  "wshobson/agents@postgresql-table-design"
+                                       },
+                                       {
+                                           "why":  "TDD 409 solape, TTL 30min, ventana 12hs, webhook idempotente (C-05/C-06/C-09)",
+                                           "installs":  "1.1M",
+                                           "name":  "tdd",
+                                           "repo":  "mattpocock/skills@tdd"
+                                       },
+                                       {
+                                           "why":  "Red-green para motor reservas y conciliacion MP (C-05/C-08/C-09)",
+                                           "installs":  "248.7K",
+                                           "name":  "test-driven-development",
+                                           "repo":  "obra/superpowers@test-driven-development"
+                                       },
+                                       {
+                                           "why":  "E2E reserva publica + gestionar token + checkout MP (C-06/C-08)",
+                                           "installs":  "176.6K",
+                                           "name":  "webapp-testing",
+                                           "repo":  "anthropics/skills@webapp-testing"
+                                       },
+                                       {
+                                           "why":  "E2E booking/agenda y flake-free en CI frontend (C-06/C-07)",
+                                           "installs":  "93.2K",
+                                           "name":  "playwright-best-practices",
+                                           "repo":  "currents-dev/playwright-best-practices-skill@playwright-best-practices"
+                                       },
+                                       {
+                                           "why":  "Vitest/Testing Library para features booking/agenda/admin (C-06/C-07/C-13)",
+                                           "installs":  "20K",
+                                           "name":  "javascript-testing-patterns",
+                                           "repo":  "wshobson/agents@javascript-testing-patterns"
+                                       },
+                                       {
+                                           "why":  "Login JWT + RBAC recepcion/odonto/admin y paciente v1.1 (C-03/C-11)",
+                                           "installs":  "18.3K",
+                                           "name":  "auth-implementation-patterns",
+                                           "repo":  "wshobson/agents@auth-implementation-patterns"
+                                       },
+                                       {
+                                           "why":  "Auditar claims sub/clinic_id/rol/jti, refresh rotado HttpOnly, blacklist (C-03)",
+                                           "installs":  "806",
+                                           "name":  "jwt-security-review",
+                                           "repo":  "securityskills/skills@jwt-security-review"
+                                       },
+                                       {
+                                           "why":  "Rate limit 5/60s login por IP+email con Redis (C-03)",
+                                           "installs":  "18.4K",
+                                           "name":  "upstash-ratelimit-js",
+                                           "repo":  "upstash/skills@upstash-ratelimit-js"
+                                       },
+                                       {
+                                           "why":  "Jobs expiracion pendiente_sena 30min + recordatorio T-24h + backoff WA (C-05/C-10)",
+                                           "installs":  "6.3K",
+                                           "name":  "redis-patterns",
+                                           "repo":  "affaan-m/ecc@redis-patterns"
+                                       },
+                                       {
+                                           "why":  "Modelo keys Redis 7 jobs/scheduler/blacklist oficial redis (C-05/C-10/C-03)",
+                                           "installs":  "3.6K",
+                                           "name":  "redis-core",
+                                           "repo":  "redis/agent-skills@redis-core"
+                                       },
+                                       {
+                                           "why":  "Compose api+postgres+redis+worker y CI ruff/pytest + tsc/build (C-01)",
+                                           "installs":  "10.5K",
+                                           "name":  "deployment-patterns",
+                                           "repo":  "affaan-m/ecc@deployment-patterns"
+                                       },
+                                       {
+                                           "why":  "Orquestacion docker-compose y 12 vars env sin hardcodear (C-01)",
+                                           "installs":  "2.9K",
+                                           "name":  "docker-compose-orchestration",
+                                           "repo":  "manutej/luxor-claude-marketplace@docker-compose-orchestration"
+                                       },
+                                       {
+                                           "why":  "FastAPI modular domain/infra/api + UoW/repos para turnos/pagos (C-01/C-02/C-05)",
+                                           "installs":  "2.2K",
+                                           "name":  "backend-development",
+                                           "repo":  "mrgoonie/claudekit-skills@backend-development"
+                                       },
+                                       {
+                                           "why":  "Especifica FastAPI: routers public/internal/webhooks + Pydantic settings (C-01/C-05)",
+                                           "installs":  "534",
+                                           "name":  "python-fastapi-development",
+                                           "repo":  "sickn33/agentic-awesome-skills@python-fastapi-development"
+                                       }
+                                   ],
+                   "installed":  [
+
+                                 ]
+               }
+}
