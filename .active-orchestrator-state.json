@@ -2,10 +2,10 @@
   "discovery": {
     "casos_de_uso": [
       "Paciente reserva 24/7 sin login obligatorio",
-      "RecepciÃƒÆ’Ã‚Â³n agenda multi-sillÃƒÆ’Ã‚Â³n dÃƒÆ’Ã‚Â­a/semana sin solape",
-      "Paciente paga seÃƒÆ’Ã‚Â±a % MP y recibe WA 24hs antes",
-      "RecepciÃƒÆ’Ã‚Â³n cancela/reprograma liberando horario",
-      "OdontÃƒÆ’Ã‚Â³logo ve su dÃƒÆ’Ã‚Â­a + odontograma/historia",
+      "RecepciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n agenda multi-sillÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­a/semana sin solape",
+      "Paciente paga seÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â±a % MP y recibe WA 24hs antes",
+      "RecepciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n cancela/reprograma liberando horario",
+      "OdontÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³logo ve su dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­a + odontograma/historia",
       "Admin configura aranceles y reportes"
     ],
     "competitors": [
@@ -45,62 +45,62 @@
     "created_by": "discovery-research",
     "funcionalidades_necesarias": [
       "Reserva 24/7 sin login obligatorio + login opcional historial",
-      "Agenda multi-sillÃƒÆ’Ã‚Â³n dÃƒÆ’Ã‚Â­a/semana + panel recepciÃƒÆ’Ã‚Â³n",
-      "Cancelar/reprogramar con liberaciÃƒÆ’Ã‚Â³n",
-      "SeÃƒÆ’Ã‚Â±a % Mercado Pago en v1",
+      "Agenda multi-sillÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­a/semana + panel recepciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n",
+      "Cancelar/reprogramar con liberaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n",
+      "SeÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â±a % Mercado Pago en v1",
       "Recordatorio WhatsApp 24hs antes",
-      "Odontograma + historia clÃƒÆ’Ã‚Â­nica v1",
+      "Odontograma + historia clÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­nica v1",
       "ABM aranceles por Administrador"
     ],
     "funcionalidades_opcionales": [
-      "OS/nomenclador automÃƒÆ’Ã‚Â¡tico",
-      "FacturaciÃƒÆ’Ã‚Â³n ARCA",
+      "OS/nomenclador automÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡tico",
+      "FacturaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n ARCA",
       "Liquidaciones por profesional",
       "Portal post-tratamiento",
       "Multi-sede (fuera v1)"
     ],
     "integraciones": [
-      "Mercado Pago seÃƒÆ’Ã‚Â±a %",
-      "WhatsApp confirmaciÃƒÆ’Ã‚Â³n/recordatorio",
+      "Mercado Pago seÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â±a %",
+      "WhatsApp confirmaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n/recordatorio",
       "Google Calendar + email respaldo"
     ],
     "preguntas_abiertas": [
-      "DuraciÃƒÆ’Ã‚Â³n bloqueo por 2 faltas",
-      "% seÃƒÆ’Ã‚Â±a por tipo de prÃƒÆ’Ã‚Â¡ctica",
+      "DuraciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n bloqueo por 2 faltas",
+      "% seÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â±a por tipo de prÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡ctica",
       "Proveedor WhatsApp final Meta vs Twilio"
     ],
-    "problema": "Consultorios coordinan por WhatsApp/papel: dobles reservas, ausentismo sin seÃƒÆ’Ã‚Â±a y tiempo confirmando manual",
+    "problema": "Consultorios coordinan por WhatsApp/papel: dobles reservas, ausentismo sin seÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â±a y tiempo confirmando manual",
     "reglas_de_negocio": [
-      "Sin solape por sillÃƒÆ’Ã‚Â³n/odontÃƒÆ’Ã‚Â³logo",
-      "CancelaciÃƒÆ’Ã‚Â³n mÃƒÆ’Ã‚Â­nima 12hs",
-      "1 reprogramaciÃƒÆ’Ã‚Â³n sin perder seÃƒÆ’Ã‚Â±a; cancela tarde = seÃƒÆ’Ã‚Â±a no reembolsable",
+      "Sin solape por sillÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n/odontÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³logo",
+      "CancelaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­nima 12hs",
+      "1 reprogramaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n sin perder seÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â±a; cancela tarde = seÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â±a no reembolsable",
       "Bloqueo si falta 2 veces",
-      "SeÃƒÆ’Ã‚Â±a en % configurada por Admin"
+      "SeÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â±a en % configurada por Admin"
     ],
     "restricciones": [
       "Backend Python/FastAPI/JWT/SQLAlchemy/PostgreSQL/Redis/Docker-Compose",
       "Frontend React/TypeScript/Vite",
-      "1 clÃƒÆ’Ã‚Â­nica en v1",
+      "1 clÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­nica en v1",
       "Mobile-first"
     ],
     "riesgos": [
-      "AdopciÃƒÆ’Ã‚Â³n: siguen por WA y seÃƒÆ’Ã‚Â±a genera fricciÃƒÆ’Ã‚Â³n/abandono (supuesto sin probar)",
-      "RecepciÃƒÆ’Ã‚Â³n no actualiza disponibilidad",
+      "AdopciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n: siguen por WA y seÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â±a genera fricciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n/abandono (supuesto sin probar)",
+      "RecepciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n no actualiza disponibilidad",
       "Costos/bloqueo WhatsApp Meta-Twilio",
-      "FricciÃƒÆ’Ã‚Â³n y conciliaciÃƒÆ’Ã‚Â³n MP"
+      "FricciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n y conciliaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n MP"
     ],
     "sources": [
       "relevamiento-18-sistemas-2026-10-06"
     ],
     "usuarios": [
       "Paciente: reserva 24/7 login opcional",
-      "Recepcionista: agenda multi-sillÃƒÆ’Ã‚Â³n",
-      "OdontÃƒÆ’Ã‚Â³logo: su sillÃƒÆ’Ã‚Â³n y pacientes",
-      "Admin clÃƒÆ’Ã‚Â­nica: aranceles y reportes, 1 clÃƒÆ’Ã‚Â­nica"
+      "Recepcionista: agenda multi-sillÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n",
+      "OdontÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³logo: su sillÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n y pacientes",
+      "Admin clÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­nica: aranceles y reportes, 1 clÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­nica"
     ]
   },
   "owner": "active-orchestrator",
-  "step": "registry",
+  "step": "done",
   "version": 4,
   "kb": {
     "files": [
@@ -124,7 +124,7 @@
       "stack": "Python/FastAPI/JWT/SQLAlchemy/PostgreSQL/Redis/Docker-Compose + React/TypeScript/Vite",
       "domain": "odontologia",
       "system_type": "web_app",
-      "problem": "Consultorios coordinan por WhatsApp/papel: dobles reservas, ausentismo sin seÃƒÆ’Ã‚Â±a y tiempo confirmando manual",
+      "problem": "Consultorios coordinan por WhatsApp/papel: dobles reservas, ausentismo sin seÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â±a y tiempo confirmando manual",
       "needs_infra": true,
       "scale": "team"
     }
@@ -296,5 +296,13 @@
       "openspec-archive-change"
     ],
     "conventions": []
+  },
+  "agents": {
+    "created_by": "agent-instruction",
+    "files": [
+      "AGENTS.md",
+      "CLAUDE.md"
+    ],
+    "reglas_applied": 10
   }
 }
