@@ -1,0 +1,91 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: turnos_odontologia
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://postgres:postgres@postgres:5432/turnos_odontologia
+      - REDIS_URL=redis://redis:6379/0
+      - JWT_SECRET=dev-secret-change-in-production
+      - JWT_EXPIRES_MIN=30
+      - TZ_CLINICA=America/Argentina/Buenos_Aires
+      - MP_ACCESS_TOKEN=
+      - MP_WEBHOOK_SECRET=
+      - MP_TTL_MIN=30
+      - TWILIO_SID=
+      - TWILIO_TOKEN=
+      - TWILIO_WA_FROM=
+      - GCAL_CALENDAR_ID=
+      - SMTP_URL=
+      - FRONTEND_URL=http://localhost:5173
+      - LOG_LEVEL=INFO
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+  worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://postgres:postgres@postgres:5432/turnos_odontologia
+      - REDIS_URL=redis://redis:6379/0
+      - JWT_SECRET=dev-secret-change-in-production
+      - JWT_EXPIRES_MIN=30
+      - TZ_CLINICA=America/Argentina/Buenos_Aires
+      - MP_ACCESS_TOKEN=
+      - MP_WEBHOOK_SECRET=
+      - MP_TTL_MIN=30
+      - TWILIO_SID=
+      - TWILIO_TOKEN=
+      - TWILIO_WA_FROM=
+      - GCAL_CALENDAR_ID=
+      - SMTP_URL=
+      - FRONTEND_URL=http://localhost:5173
+      - LOG_LEVEL=INFO
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: python -m app.infrastructure.queue.worker
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  default:
+    name: turnos_network_ci
