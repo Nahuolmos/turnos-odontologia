@@ -1,0 +1,8 @@
+
+__pycache__/
+*.pyc
+*.db
+.coverage
+.active-orchestrator-state.json.bak
+dist/
+node_modules/
